@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #1A1208;
+    --bg-surface: #1E140A;
+    --bg-elevated: #281B0E;
+    --bg-card: #22170C;
+    --border-subtle: #382513;
+    --border-focus: #C68A2E;
+    --text-main: #F5EFEB;
+    --text-muted: #A39180;
+    --text-faint: #6E5F52;
+    --accent-amber: #D49A3D;
+    --accent-gold: #E6B86A;
+    --accent-warm: #8C5C26;
+    --status-online: #34D399;
+    --status-error: #F87171;
+    --status-warn: #FBBF24;
+  }
+
+  body {
+    background-color: #1A1208;
+    color: #F5EFEB;
+    font-family: 'Newsreader', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  .font-serif {
+    font-family: 'Newsreader', Georgia, serif;
+  }
+
+  .font-sans {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom editorial scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1208;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #382513;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #54391F;
+}
+
+/* Subtle glow and terminal scanline effects */
+.terminal-glow {
+  text-shadow: 0 0 12px rgba(212, 154, 61, 0.25);
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: #D49A3D;
+  vertical-align: middle;
+  animation: terminal-blink 1s step-end infinite;
+}
+
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
